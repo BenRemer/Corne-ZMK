@@ -5,6 +5,7 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
@@ -76,10 +77,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp DOLLAR       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS  &kp DEL
-&kp LCTRL  &trans    &trans  &trans    &trans    &trans       &kp PERIOD       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp EQUAL  &kp ASTERISK
-&kp LSHFT  &trans    &trans  &trans    &trans    &trans       &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp SLASH  &kp COMMA
-                             &kp LGUI  &to 0     &kp SPACE    &kp RET          &to 1            &kp BACKSPACE
+&kp TAB     &kp EXCL    &none   &kp C_PREVIOUS  &kp C_PLAY  &kp C_NEXT           &kp DOLLAR       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS  &kp DEL
+&bt BT_NXT  &trans      &trans  &trans          &trans      &kp C_VOLUME_UP      &kp PERIOD       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp EQUAL  &kp ASTERISK
+&bt BT_PRV  &bt BT_CLR  &trans  &trans          &trans      &kp C_VOLUME_DOWN    &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp SLASH  &kp COMMA
+                                &kp LGUI        &to 0       &kp SPACE            &kp RET          &to 1            &kp BACKSPACE
             >;
         };
     };
