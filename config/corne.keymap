@@ -5,7 +5,6 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
@@ -53,10 +52,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
-&kp LSHFT   &trans        &trans        &trans        &trans        &trans          &trans    &trans    &trans    &trans     &trans  &trans
-                                        &kp LGUI      &to 0         &kp SPACE       &kp RET   &to 2     &kp RALT
+&kp ESCAPE                       &kp LEFT_ALT  &kp PERCENT   &kp CARET      &kp PIPE       &kp MINUS    &kp GRAVE         &kp EXCLAMATION       &kp AMPERSAND          &kp DOLLAR         &kp SCROLLLOCK  &kp DEL
+&kp TAB                          &trans        &kp HASH      &kp AMPERSAND  &kp BACKSLASH  &kp SLASH    &kp LEFT          &kp DOWN              &kp UP                 &kp RIGHT          &trans          &tap_hold PAGE_UP HOME
+&tap_hold LEFT_SHIFT LEFT_SHIFT  &trans        &kp ASTERISK  &kp AT_SIGN    &kp TILDE      &kp EQUAL    &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &trans          &tap_hold PAGE_DOWN END
+                                                             &kp LGUI       &to 0          &kp SPACE    &kp RET           &to 2                 &kp BACKSPACE
             >;
         };
 
