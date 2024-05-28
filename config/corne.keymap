@@ -24,6 +24,15 @@
             #binding-cells = <0>;
             bindings = <&tap_hold RIGHT_ALT RIGHT_ALT>, <&kp CAPS>;
         };
+
+        hold_no_tap: hold_no_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_NO_TAP";
+            bindings = <&kp>, <&none>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+        };
     };
 
     keymap {
@@ -37,10 +46,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE                       &kp Q  &kp W  &kp E      &kp R  &kp T        &kp Y    &kp U  &kp I          &kp O    &kp P     &kp DEL
-&kp TAB                          &kp A  &kp S  &kp D      &kp F  &kp G        &kp H    &kp J  &kp K          &kp L    &kp SEMI  &kp SQT
-&tap_hold LEFT_SHIFT LEFT_SHIFT  &kp Z  &kp X  &kp C      &kp V  &kp B        &kp N    &kp M  &kp COMMA      &kp DOT  &kp FSLH  &tap_dance_alt_caps
-                                               &kp LCTRL  &mo 1  &kp SPACE    &kp RET  &to 1  &kp BACKSPACE
+&kp ESCAPE                       &kp Q  &kp W  &kp E             &kp R                &kp T        &kp Y    &kp U  &kp I          &kp O    &kp P     &kp DEL
+&kp TAB                          &kp A  &kp S  &kp D             &kp F                &kp G        &kp H    &kp J  &kp K          &kp L    &kp SEMI  &kp SQT
+&tap_hold LEFT_SHIFT LEFT_SHIFT  &kp Z  &kp X  &kp C             &kp V                &kp B        &kp N    &kp M  &kp COMMA      &kp DOT  &kp FSLH  &tap_dance_alt_caps
+                                               &kp LEFT_CONTROL  &hold_no_tap LGUI 0  &kp SPACE    &kp RET  &to 1  &kp BACKSPACE
             >;
         };
 
@@ -70,7 +79,7 @@
 &kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
 &kp LCTRL  &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
 &kp LSHFT  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                             &kp LGUI  &trans    &kp SPACE    &kp RET    &trans     &kp RALT
+                             &kp LGUI  &to 0     &kp SPACE    &kp RET    &to 1      &kp RALT
             >;
         };
     };
