@@ -37,6 +37,20 @@
             #binding-cells = <2>;
             tapping-term-ms = <100>;
         };
+
+        tap_dance_pgup_home: tap_dance_pgup_home {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_PGUP_HOME";
+            #binding-cells = <0>;
+            bindings = <&kp HOME>, <&kp PAGE_UP>;
+        };
+
+        tap_dance_pgdown_end: tap_dance_pgdown_end {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_PGDOWN_END";
+            #binding-cells = <0>;
+            bindings = <&kp END>, <&kp PAGE_DOWN>;
+        };
     };
 
     keymap {
@@ -66,8 +80,8 @@
 
             bindings = <
 &kp ESCAPE                       &kp LEFT_ALT  &kp PERCENT   &kp CARET      &kp PIPE       &kp MINUS    &kp GRAVE         &kp EXCLAMATION       &kp AMPERSAND          &kp DOLLAR         &kp SCROLLLOCK  &kp DEL
-&kp TAB                          &trans        &kp HASH      &kp AMPERSAND  &kp BACKSLASH  &kp SLASH    &kp LEFT          &kp DOWN              &kp UP                 &kp RIGHT          &trans          &tap_hold PAGE_UP HOME
-&tap_hold LEFT_SHIFT LEFT_SHIFT  &trans        &kp ASTERISK  &kp AT_SIGN    &kp TILDE      &kp EQUAL    &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &trans          &tap_hold PAGE_DOWN END
+&kp TAB                          &trans        &kp HASH      &kp AMPERSAND  &kp BACKSLASH  &kp SLASH    &kp LEFT          &kp DOWN              &kp UP                 &kp RIGHT          &trans          &tap_dance_pgup_home
+&tap_hold LEFT_SHIFT LEFT_SHIFT  &trans        &kp ASTERISK  &kp AT_SIGN    &kp TILDE      &kp EQUAL    &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &trans          &tap_dance_pgdown_end
                                                              &kp LGUI       &to 0          &kp SPACE    &kp RET           &to 2                 &kp BACKSPACE
             >;
         };
