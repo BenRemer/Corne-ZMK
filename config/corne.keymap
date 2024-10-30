@@ -80,8 +80,8 @@
 
             bindings = <
 &kp ESCAPE                       &kp LEFT_ALT  &kp PERCENT   &kp CARET      &kp PIPE       &kp MINUS    &kp GRAVE         &kp EXCLAMATION       &kp AMPERSAND          &kp DOLLAR         &kp SCROLLLOCK  &kp DEL
-&kp TAB                          &trans        &kp HASH      &kp AMPERSAND  &kp BACKSLASH  &kp SLASH    &kp LEFT          &kp DOWN              &kp UP                 &kp RIGHT          &trans          &tap_dance_pgup_home
-&tap_hold LEFT_SHIFT LEFT_SHIFT  &trans        &kp ASTERISK  &kp AT_SIGN    &kp TILDE      &kp EQUAL    &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &trans          &tap_dance_pgdown_end
+&kp TAB                          &none         &kp HASH      &kp AMPERSAND  &kp BACKSLASH  &kp SLASH    &kp LEFT          &kp DOWN              &kp UP                 &kp RIGHT          &trans          &tap_dance_pgup_home
+&tap_hold LEFT_SHIFT LEFT_SHIFT  &none         &kp ASTERISK  &kp AT_SIGN    &kp TILDE      &kp EQUAL    &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &trans          &tap_dance_pgdown_end
                                                              &kp LGUI       &to 0          &kp SPACE    &kp RET           &to 2                 &kp BACKSPACE
             >;
         };
@@ -94,10 +94,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp ESCAPE                       &trans  &none       &kp K_PREV  &kp K_PLAY_PAUSE  &kp K_NEXT           &kp DOLLAR       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS  &kp DEL
-&kp TAB                          &trans  &trans      &trans      &trans            &kp C_VOLUME_UP      &kp PERIOD       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp EQUAL  &kp ASTERISK
-&tap_hold LEFT_SHIFT LEFT_SHIFT  &trans  &bt BT_CLR  &bt BT_PRV  &bt BT_NXT        &kp C_VOLUME_DOWN    &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp SLASH  &kp COMMA
-                                                     &kp LGUI    &to 0             &kp SPACE            &kp RET          &to 1            &kp BACKSPACE
+&kp ESCAPE                       &trans  &none   &kp K_PREV  &kp K_PLAY_PAUSE  &kp K_NEXT           &kp DOLLAR       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS  &kp DEL
+&kp TAB                          &trans  &trans  &trans      &trans            &kp C_VOLUME_UP      &kp PERIOD       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp EQUAL  &kp ASTERISK
+&tap_hold LEFT_SHIFT LEFT_SHIFT  &trans  &none   &bt BT_PRV  &bt BT_NXT        &kp C_VOLUME_DOWN    &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp SLASH  &kp COMMA
+                                                 &kp LGUI    &to 0             &kp SPACE            &kp RET          &to 1            &kp BACKSPACE
             >;
         };
     };
